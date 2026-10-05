@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arpit Singh Patel | Full Stack MERN & Real-Time Web Developer</title>
+  <meta name="description" content="Portfolio of Arpit Singh Patel — MERN Stack Developer, Real-Time Web Systems Architect & AI/Python Enthusiast based in Indore, India." />
+  <meta name="keywords" content="Arpit Singh Patel, Arpit-aka-appu, Full Stack Developer, MERN Stack, React Developer, Node.js, WebSockets, Portfolio" />
+  <meta name="author" content="Arpit Singh Patel" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arpit Singh Patel | Full Stack Developer Portfolio" />
+  <meta property="og:description" content="Turning ideas into real-time web experiences with MERN Stack, WebSockets, and AI." />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/228281764?v=4" />
+  <meta property="og:url" content="https://github.com/Arpit-aka-appu" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-theme="dark">
+  <!-- Interactive Ambient Canvas Background -->
+  <canvas id="ambient-canvas"></canvas>
+
+  <!-- Notification Toast Container -->
+  <div id="toast" class="toast" role="alert" aria-live="polite"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container" aria-label="Main Navigation">
+      <a href="#hero" class="brand-logo" aria-label="Arpit Singh Patel Home">
+        <span class="logo-symbol">&lt;</span>
+        <span class="logo-name">Arpit</span>
+        <span class="logo-accent">.dev</span>
+        <span class="logo-symbol">/&gt;</span>
+      </a>
+
+      <div class="nav-links" id="nav-menu">
+        <a href="#hero" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#projects" class="nav-item">Projects</a>
+        <a href="#journey" class="nav-item">Journey</a>
+        <a href="#github" class="nav-item">GitHub</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's Connect</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-status">
+            <span class="status-dot"></span>
+            <span>Available for Opportunities & Projects</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Arpit Singh Patel</span>
+          </h1>
+
+          <div class="hero-role-wrapper">
+            <span class="role-prefix">I build </span>
+            <span class="typewriter" id="typewriter"></span>
+            <span class="cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Passionate Full-Stack Developer from <strong>Indore, India</strong>. I specialize in turning complex ideas into blazing-fast, real-time web applications using modern JavaScript, React, Node.js, and Python.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <div class="hero-social-links">
+            <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/arpit-singh-patel/" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <button class="social-pill btn-copy-email" data-email="arpitsinghpatel9399@gmail.com" title="Copy Email">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>arpitsinghpatel9399@gmail.com</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Interactive Code Window Showcase -->
+        <div class="hero-visual">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-controls">
+                <span class="control red"></span>
+                <span class="control yellow"></span>
+                <span class="control green"></span>
+              </div>
+              <div class="file-name">developer.ts</div>
+              <div class="badge-lang">TypeScript</div>
+            </div>
+            <div class="code-card-body">
+              <pre><code><span class="token-keyword">const</span> <span class="token-var">developer</span>: <span class="token-type">FullStackEngineer</span> = {
+  <span class="token-key">name</span>: <span class="token-string">"Arpit Singh Patel"</span>,
+  <span class="token-key">handle</span>: <span class="token-string">"Arpit-aka-appu"</span>,
+  <span class="token-key">location</span>: <span class="token-string">"Indore, India 🇮🇳"</span>,
+  <span class="token-key">stack</span>: [<span class="token-string">"MongoDB"</span>, <span class="token-string">"Express"</span>, <span class="token-string">"React"</span>, <span class="token-string">"Node.js"</span>],
+  <span class="token-key">specialties</span>: [
+    <span class="token-string">"Real-Time WebSockets"</span>,
+    <span class="token-string">"Scalable API Architecture"</span>,
+    <span class="token-string">"AI & Machine Learning (Python)"</span>
+  ],
+  <span class="token-key">motto</span>: <span class="token-string">"The best way to predict the future is to invent it."</span>,
+  <span class="token-key">readyToBuild</span>: <span class="token-boolean">true</span>
+};
+
+<span class="token-comment">// Initiate realtime experience</span>
+<span class="token-keyword">await</span> developer.<span class="token-func">turnIdeasIntoReality</span>();</code></pre>
+            </div>
+            <div class="code-card-footer">
+              <div class="pulse-indicator">
+                <span class="pulse-circle"></span>
+                <span>Socket Connected: Latency 14ms</span>
+              </div>
+              <span class="commit-hash">git commit -m "feat: real-time web"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="metrics-ribbon">
+        <div class="metric-card">
+          <span class="metric-number" data-count="100">100%</span>
+          <span class="metric-label">Clean Code Commitment</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number" data-count="4">4+</span>
+          <span class="metric-label">Core Architecture Stacks</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">Real-Time</span>
+          <span class="metric-label">WebSocket & Event Systems</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-number">Full Stack</span>
+          <span class="metric-label">Frontend to Cloud APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Driven by Innovation, Powered by Code</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio-card glass-panel">
+          <div class="bio-top">
+            <div class="bio-avatar-glow">
+              <img src="https://avatars.githubusercontent.com/u/228281764?v=4" alt="Arpit Singh Patel avatar" class="bio-avatar" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'120\' height=\'120\' viewBox=\'0 0 24 24\' fill=\'%236366f1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M20 21a8 8 0 1 0-16 0\'/></svg>'" />
+            </div>
+            <div class="bio-intro">
+              <h3>Arpit Singh Patel</h3>
+              <p class="bio-title">Full Stack Developer & Software Innovator</p>
+              <div class="bio-badges">
+                <span class="chip">📍 Indore, India</span>
+                <span class="chip">🚀 MERN Specialist</span>
+                <span class="chip">⚡ Real-Time Architect</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bio-text">
+            <p>
+              I am a developer who genuinely loves building things that live on the internet. My core focus is bridging intuitive, interactive user interfaces with rock-solid, high-throughput backends.
+            </p>
+            <p>
+              Whether it's building a <strong>real-time collaborative workspace like VibeCodeLive</strong>, crafting real-time messaging engines, or engineering optimized caching systems, I thrive on unraveling complex problems into elegant solutions.
+            </p>
+            <p>
+              I am also deeply intrigued by <strong>AI & Machine Learning with Python</strong>, exploring ways to embed intelligent behaviors into modern web applications.
+            </p>
+          </div>
+
+          <div class="bio-highlights-grid">
+            <div class="highlight-item">
+              <div class="highlight-icon">🎯</div>
+              <div>
+                <h4>Problem Solver</h4>
+                <p>Translating business needs into clean modular architecture.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">⚡</div>
+              <div>
+                <h4>Real-Time Focused</h4>
+                <p>Expertise in WebSocket streams, low latency, and event-driven data.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🌱</div>
+              <div>
+                <h4>Continuous Learner</h4>
+                <p>Staying at the bleeding edge of AI/ML, Python, and modern web frameworks.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon">🤝</div>
+              <div>
+                <h4>Collaborative Spirit</h4>
+                <p>Dedicated to open-source contributions and team-driven development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-interactive-card glass-panel">
+          <div class="terminal-tab-header">
+            <span class="tab-title">arpit@indore:~$ fast-facts --all</span>
+          </div>
+          <div class="terminal-body">
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Primary Focus:</span>
+              <span class="term-val">Full-Stack MERN, WebSockets & Python</span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Location:</span>
+              <span class="term-val">Indore, Madhya Pradesh, India</span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Email:</span>
+              <span class="term-val"><a href="mailto:arpitsinghpatel9399@gmail.com">arpitsinghpatel9399@gmail.com</a></span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Currently Building:</span>
+              <span class="term-val">Real-time collaboration tools & instant messaging</span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Currently Learning:</span>
+              <span class="term-val">Advanced AI/ML with Python & Distributed Caching</span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Interests:</span>
+              <span class="term-val">WebSockets, Distributed Systems, AI, UX Design</span>
+            </div>
+            <div class="terminal-row">
+              <span class="term-prompt">&gt;</span>
+              <span class="term-key">Open For:</span>
+              <span class="term-val">Full-time roles, Freelance & Open-Source</span>
+            </div>
+          </div>
+
+          <div class="about-cta-box">
+            <p>Looking for a developer who ships fast and writes clean code?</p>
+            <div class="cta-actions">
+              <a href="#contact" class="btn btn-primary btn-sm">Let's Discuss Opportunities</a>
+              <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Explore GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section container">
+      <div class="section-header">
+        <span class="section-tag">Technical Proficiency</span>
+        <h2 class="section-title">Tools, Technologies & Architecture</h2>
+        <p class="section-subtitle">A curated view of languages, frameworks, databases, and tools I use to build scalable systems.</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-tabs" role="tablist">
+        <button class="filter-tab active" data-filter="all">All Technologies</button>
+        <button class="filter-tab" data-filter="frontend">Frontend & UI</button>
+        <button class="filter-tab" data-filter="backend">Backend & APIs</button>
+        <button class="filter-tab" data-filter="database">Databases & Caching</button>
+        <button class="filter-tab" data-filter="ai-tools">AI, Python & Tools</button>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Frontend -->
+        <div class="skill-card glass-panel" data-category="frontend">
+          <div class="skill-icon-wrap react-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="2.5"></circle>
+              <ellipse cx="12" cy="12" rx="10" ry="4.5"></ellipse>
+              <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"></ellipse>
+              <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"></ellipse>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>React.js</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Hooks, State Management, Component Architecture, Virtual DOM & SPA Optimization.</p>
+            <div class="skill-tags">
+              <span>Hooks</span><span>Context API</span><span>Redux / Zustand</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="frontend">
+          <div class="skill-icon-wrap js-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M3 3h18v18H3V3zm15.5 13.5v-7h-2.5v7h2.5zm-5.5 0v-4.5c0-1.1-.9-2-2-2h-2v6.5h2v-2h2v2h2z"/>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>JavaScript (ES6+)</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Async/Await, Closures, Event Loop, DOM Manipulation, Modules & Modern Specs.</p>
+            <div class="skill-tags">
+              <span>Async/Await</span><span>ESNext</span><span>Event Loop</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="frontend">
+          <div class="skill-icon-wrap html-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 3l1.5 16L12 21l6.5-2L20 3H4z"></path>
+              <path d="M7 7h10l-.5 5H8l.3 3 3.7 1 3.7-1 .3-3"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>HTML5 & Modern CSS</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Semantic markup, Flexbox, CSS Grid, Custom Properties, Glassmorphism & Animations.</p>
+            <div class="skill-tags">
+              <span>Tailwind CSS</span><span>Responsive UI</span><span>Animations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-card glass-panel" data-category="backend">
+          <div class="skill-icon-wrap node-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"></path>
+              <path d="M12 12l9-5M12 12v10M12 12L3 7"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>Node.js</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Event-driven runtime, non-blocking I/O, server architecture, streaming & CLI tools.</p>
+            <div class="skill-tags">
+              <span>Event Loop</span><span>Streams</span><span>NPM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="backend">
+          <div class="skill-icon-wrap express-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="4"></rect>
+              <path d="M7 8l5 4-5 4M13 16h4"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>Express.js & REST APIs</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Modular routing, custom middleware, authentication (JWT/OAuth), error handling & CORS.</p>
+            <div class="skill-tags">
+              <span>JWT Auth</span><span>Middleware</span><span>CRUD APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="backend">
+          <div class="skill-icon-wrap ws-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>WebSockets & Socket.io</h3>
+              <span class="skill-level">Expert Focus</span>
+            </div>
+            <p>Bi-directional real-time communication, rooms, heartbeats, presence & synchronized states.</p>
+            <div class="skill-tags">
+              <span>Real-Time Sync</span><span>Socket.io</span><span>Rooms</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skill-card glass-panel" data-category="database">
+          <div class="skill-icon-wrap mongo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C12 2 5 8 5 14c0 4 3 8 7 8s7-4 7-8c0-6-7-12-7-12z"></path>
+              <path d="M12 2v20"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>MongoDB & Mongoose</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>NoSQL schema modeling, aggregation pipelines, indexing, indexing strategies & data integrity.</p>
+            <div class="skill-tags">
+              <span>Aggregations</span><span>Mongoose ODM</span><span>Indexing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="database">
+          <div class="skill-icon-wrap redis-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7l8-4 8 4v10l-8 4-8-4V7z"></path>
+              <path d="M4 7l8 4 8-4M12 11v10"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>Caching & Redis Engine</h3>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <p>In-memory data structures, cache eviction policies (LRU/LFU), pub/sub messaging & speedups.</p>
+            <div class="skill-tags">
+              <span>LRU / LFU</span><span>In-Memory Cache</span><span>Sub-ms Latency</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI, Python & Tools -->
+        <div class="skill-card glass-panel" data-category="ai-tools">
+          <div class="skill-icon-wrap python-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2C7.5 2 7.5 4 7.5 4v3h9V4s0-2-4.5-2z"></path>
+              <path d="M12 22c4.5 0 4.5-2 4.5-2v-3h-9v3s0 2 4.5 2z"></path>
+              <path d="M4 12c0-4.5 2-4.5 2-4.5h3v9H6s-2 0-2-4.5z"></path>
+              <path d="M20 12c0 4.5-2 4.5-2 4.5h-3v-9h3s2 0 2 4.5z"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>Python & AI / ML</h3>
+              <span class="skill-level">Active Exploration</span>
+            </div>
+            <p>Data analysis, AI/ML pipelines, algorithmic problem solving, scripting, and backend workflows.</p>
+            <div class="skill-tags">
+              <span>NumPy / Pandas</span><span>ML Models</span><span>Algorithms</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card glass-panel" data-category="ai-tools">
+          <div class="skill-icon-wrap git-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="18" r="3"></circle>
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <path d="M6 9v6"></path>
+              <path d="M9 6h6a3 3 0 0 1 3 3v6"></path>
+            </svg>
+          </div>
+          <div class="skill-info">
+            <div class="skill-header">
+              <h3>Git, GitHub & Postman</h3>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <p>Version control, branch management, collaborative workflows, API testing & Linux CLI.</p>
+            <div class="skill-tags">
+              <span>Version Control</span><span>Postman Testing</span><span>Linux / Bash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section container">
+      <div class="section-header">
+        <span class="section-tag">Featured Work</span>
+        <h2 class="section-title">Highlighted Projects & Codebases</h2>
+        <p class="section-subtitle">Real-world applications crafted with attention to performance, architecture, and user experience.</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <!-- Project Filter -->
+      <div class="projects-filter-bar">
+        <button class="p-filter-btn active" data-pfilter="all">All Projects</button>
+        <button class="p-filter-btn" data-pfilter="realtime">Real-Time & Collaboration</button>
+        <button class="p-filter-btn" data-pfilter="fullstack">Full Stack MERN</button>
+        <button class="p-filter-btn" data-pfilter="systems">Systems & AI</button>
+      </div>
+
+      <div class="projects-grid" id="projects-container">
+
+        <!-- Project 1: VibeCodeLive -->
+        <article class="project-card glass-panel" data-category="realtime">
+          <div class="project-banner bg-gradient-blue">
+            <div class="project-banner-badge">Real-Time Platform</div>
+            <div class="banner-icon-display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Full-Stack Collaborative App</span>
+              <span class="project-status">Pinned Repository</span>
+            </div>
+            <h3 class="project-title">VibeCodeLive</h3>
+            <p class="project-desc">
+              A real-time collaborative coding and interactive learning platform where students and teachers code together simultaneously, share architectural ideas, and interact live with synchronized code editors.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Synchronized Multi-User Code Editor via WebSockets</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Live Interactive Classroom Rooms with Role Permissions</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Low Latency Conflict Resolution & Instant State Broadcast</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-pills">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>WebSockets</span>
+              <span>Socket.io</span>
+              <span>Express</span>
+              <span>Monaco Editor</span>
+            </div>
+
+            <div class="project-footer-links">
+              <a href="https://github.com/Arpit-aka-appu/VibeCodeLive" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>View Source</span>
+              </a>
+              <button class="btn btn-primary btn-sm btn-quick-view" data-project="vibecode">
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Real-Time Instant Messaging App -->
+        <article class="project-card glass-panel" data-category="realtime fullstack">
+          <div class="project-banner bg-gradient-purple">
+            <div class="project-banner-badge">Real-Time Chat</div>
+            <div class="banner-icon-display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Full-Stack WhatsApp Architecture</span>
+              <span class="project-status">Featured Project</span>
+            </div>
+            <h3 class="project-title">Real-Time Messaging Application</h3>
+            <p class="project-desc">
+              A high-performance instant chat application engineered with responsive UI, real-time message delivery, online presence tracking, typing indicators, and MongoDB message persistence.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Instant 1-on-1 & Group Messaging with Delivery Status</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>JWT Authentication & Secure RESTful API Endpoint Protection</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Optimistic UI Updates for Seamless User Experience</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-pills">
+              <span>MERN Stack</span>
+              <span>Socket.io</span>
+              <span>MongoDB</span>
+              <span>Express.js</span>
+              <span>React</span>
+              <span>Tailwind CSS</span>
+            </div>
+
+            <div class="project-footer-links">
+              <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>View Repository</span>
+              </a>
+              <button class="btn btn-primary btn-sm btn-quick-view" data-project="chat">
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Cache-Project -->
+        <article class="project-card glass-panel" data-category="systems">
+          <div class="project-banner bg-gradient-emerald">
+            <div class="project-banner-badge">Systems Architecture</div>
+            <div class="banner-icon-display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">High-Speed In-Memory Cache</span>
+              <span class="project-status">Core Systems</span>
+            </div>
+            <h3 class="project-title">Cache-Project (In-Memory Engine)</h3>
+            <p class="project-desc">
+              A high-throughput caching system designed for ultra-low latency data access. Incorporates deterministic eviction strategies (LRU/LFU), TTL expirations, and concurrency handling.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Custom LRU / LFU Eviction Algorithms for Memory Optimization</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Time-To-Live (TTL) Automatic Invalidation Mechanism</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Sub-millisecond Key-Value Store Operations</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-pills">
+              <span>Data Structures</span>
+              <span>In-Memory Storage</span>
+              <span>Node.js / Python</span>
+              <span>Algorithms</span>
+              <span>Benchmarking</span>
+            </div>
+
+            <div class="project-footer-links">
+              <a href="https://github.com/Arpit-aka-appu/Cache-Project" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>View Source</span>
+              </a>
+              <button class="btn btn-primary btn-sm btn-quick-view" data-project="cache">
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: AI & Machine Learning Suite -->
+        <article class="project-card glass-panel" data-category="systems">
+          <div class="project-banner bg-gradient-amber">
+            <div class="project-banner-badge">Machine Learning</div>
+            <div class="banner-icon-display">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">AI / ML & Data Intelligence</span>
+              <span class="project-status">Python Engine</span>
+            </div>
+            <h3 class="project-title">AI--Project & Python2 Solutions</h3>
+            <p class="project-desc">
+              Exploratory AI/ML workflows and intelligent computational scripts built with Python. Features data preprocessing, model inference pipelines, and integration endpoints for web services.
+            </p>
+
+            <div class="project-features">
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Supervised & Unsupervised Machine Learning Exploration</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modular Python Utilities for Data Transformation</span>
+              </div>
+              <div class="feature-item">
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Model Evaluation & Metric Tracking</span>
+              </div>
+            </div>
+
+            <div class="tech-stack-pills">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>Data Analysis</span>
+              <span>NumPy</span>
+              <span>Scikit-Learn</span>
+            </div>
+
+            <div class="project-footer-links">
+              <a href="https://github.com/Arpit-aka-appu/AI--Project" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                <span>View Source</span>
+              </a>
+              <button class="btn btn-primary btn-sm btn-quick-view" data-project="ai">
+                <span>Architecture Details</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE MODAL -->
+    <div id="project-modal" class="modal-backdrop" aria-hidden="true" role="dialog">
+      <div class="modal-box glass-panel">
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+        <div id="modal-content">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JOURNEY & TIMELINE SECTION -->
+    <section id="journey" class="journey-section container">
+      <div class="section-header">
+        <span class="section-tag">Career & Learning</span>
+        <h2 class="section-title">Development Journey & Milestones</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-badge">Present & Ongoing</span>
+            <h3>Deepening AI/ML & Real-Time Distributed Architectures</h3>
+            <p class="timeline-loc">Indore, India</p>
+            <p>
+              Actively mastering advanced Python AI/ML integrations, WebSockets clustering, Redis memory caches, and enterprise-grade MERN architecture. Building real-time tools for synchronous remote collaboration.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-badge">MERN & Real-Time Mastery</span>
+            <h3>Full-Stack System Engineering (Node, React, MongoDB)</h3>
+            <p class="timeline-loc">Core Development</p>
+            <p>
+              Developed full-stack web applications with end-to-end authentication, relational & NoSQL schema design, responsive frontend experiences, and asynchronous backend services.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-panel">
+            <span class="timeline-badge">Foundation</span>
+            <h3>Algorithms, Computer Science & Core Web Technologies</h3>
+            <p class="timeline-loc">Academic & Practical Foundations</p>
+            <p>
+              Solidified foundational engineering competencies in JavaScript ES6+, Python, Data Structures, algorithmic optimization, Object-Oriented design, and Git version control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB LIVE STATS SECTION -->
+    <section id="github" class="github-section container">
+      <div class="section-header">
+        <span class="section-tag">Open Source & Code</span>
+        <h2 class="section-title">GitHub Hub & Repository Stream</h2>
+        <p class="section-subtitle">Real-time statistics fetched from <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="link-highlight">@Arpit-aka-appu</a></p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="github-grid">
+        <div class="github-profile-card glass-panel">
+          <div class="gh-header">
+            <img src="https://avatars.githubusercontent.com/u/228281764?v=4" alt="GitHub Avatar" class="gh-avatar" />
+            <div>
+              <h3>Arpit Singh Patel</h3>
+              <p class="gh-login">@Arpit-aka-appu</p>
+              <p class="gh-bio">Turning ideas into real time web experience MERN stack</p>
+            </div>
+          </div>
+
+          <div class="gh-stats-row">
+            <div class="gh-stat-box">
+              <span class="gh-stat-val" id="gh-public-repos">5+</span>
+              <span class="gh-stat-label">Public Repos</span>
+            </div>
+            <div class="gh-stat-box">
+              <span class="gh-stat-val">Active</span>
+              <span class="gh-stat-label">Commits</span>
+            </div>
+            <div class="gh-stat-box">
+              <span class="gh-stat-val">MERN</span>
+              <span class="gh-stat-label">Primary Stack</span>
+            </div>
+          </div>
+
+          <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            <span>Follow on GitHub</span>
+          </a>
+        </div>
+
+        <div class="github-repos-container" id="gh-repos-list">
+          <!-- Fallback/Default repositories rendered immediately -->
+          <div class="repo-card glass-panel">
+            <div class="repo-header">
+              <a href="https://github.com/Arpit-aka-appu/VibeCodeLive" target="_blank" rel="noopener noreferrer" class="repo-name">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>VibeCodeLive</span>
+              </a>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">Real-time collaborative coding and interactive learning platform with synchronous editing.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot js-dot"></span>JavaScript</span>
+              <span class="repo-stars">⭐ Active</span>
+            </div>
+          </div>
+
+          <div class="repo-card glass-panel">
+            <div class="repo-header">
+              <a href="https://github.com/Arpit-aka-appu/Cache-Project" target="_blank" rel="noopener noreferrer" class="repo-name">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Cache-Project</span>
+              </a>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">High-efficiency caching architecture with deterministic eviction strategies and memory management.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot py-dot"></span>Node / Python</span>
+              <span class="repo-stars">⭐ Active</span>
+            </div>
+          </div>
+
+          <div class="repo-card glass-panel">
+            <div class="repo-header">
+              <a href="https://github.com/Arpit-aka-appu/AI--Project" target="_blank" rel="noopener noreferrer" class="repo-name">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>AI--Project</span>
+              </a>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">Artificial Intelligence & Machine Learning exploratory models and data processing pipelines.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot py-dot"></span>Python</span>
+              <span class="repo-stars">⭐ Active</span>
+            </div>
+          </div>
+
+          <div class="repo-card glass-panel">
+            <div class="repo-header">
+              <a href="https://github.com/Arpit-aka-appu/Python2" target="_blank" rel="noopener noreferrer" class="repo-name">
+                <svg class="icon-inline" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span>Python2 (Algorithms & Scripting)</span>
+              </a>
+              <span class="repo-badge">Public</span>
+            </div>
+            <p class="repo-desc">Modular algorithmic solutions, data structures, and automation scripting utilities.</p>
+            <div class="repo-meta">
+              <span class="repo-lang"><span class="lang-dot py-dot"></span>Python</span>
+              <span class="repo-stars">⭐ Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section container">
+      <div class="section-header">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Let's Build Something Exceptional Together</h2>
+        <p class="section-subtitle">Have a project idea, an open role, or just want to chat about tech? Feel free to reach out!</p>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-column">
+          <div class="contact-card glass-panel">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-text-group">
+              <span class="c-label">Direct Email</span>
+              <a href="mailto:arpitsinghpatel9399@gmail.com" class="c-value">arpitsinghpatel9399@gmail.com</a>
+              <button class="btn-copy-inline btn-copy-email" data-email="arpitsinghpatel9399@gmail.com">
+                <span>Copy to Clipboard</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="contact-card glass-panel">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </div>
+            <div class="contact-text-group">
+              <span class="c-label">Professional Network</span>
+              <a href="https://www.linkedin.com/in/arpit-singh-patel/" target="_blank" rel="noopener noreferrer" class="c-value">linkedin.com/in/arpit-singh-patel</a>
+              <span class="c-hint">Connect with me on LinkedIn</span>
+            </div>
+          </div>
+
+          <div class="contact-card glass-panel">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="contact-text-group">
+              <span class="c-label">GitHub Repositories</span>
+              <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer" class="c-value">github.com/Arpit-aka-appu</a>
+              <span class="c-hint">Explore codebases & stars</span>
+            </div>
+          </div>
+
+          <div class="contact-card glass-panel">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-text-group">
+              <span class="c-label">Location</span>
+              <span class="c-value">Indore, Madhya Pradesh, India</span>
+              <span class="c-hint">Available for Remote & Relocation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Contact Form -->
+        <div class="contact-form-column glass-panel">
+          <h3 class="form-title">Send a Direct Message</h3>
+          <p class="form-desc">Fill out the form below or write directly to my inbox.</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="e.g. Alex Morgan" required />
+              <span class="field-error" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="e.g. alex@example.com" required />
+              <span class="field-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry / Opportunity / Hello" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="field-error" id="message-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-submit" id="submit-btn">
+              <span>Send Message</span>
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;</span>
+          <span class="logo-name">Arpit</span>
+          <span class="logo-accent">.dev</span>
+          <span class="logo-symbol">/&gt;</span>
+        </a>
+        <p class="footer-tagline">
+          "The best way to predict the future is to invent it."
+        </p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-column">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-column">
+          <h4>Connect</h4>
+          <a href="https://github.com/Arpit-aka-appu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/arpit-singh-patel/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="mailto:arpitsinghpatel9399@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <p>&copy; <span id="current-year">2026</span> Arpit Singh Patel. Designed & Crafted with Modern Web Standards.</p>
+      <a href="#hero" class="back-to-top" aria-label="Back to top" title="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
