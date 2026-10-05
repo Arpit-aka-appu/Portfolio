@@ -49,14 +49,7 @@ npx serve /Users/apple/.gemini/antigravity/scratch/arpit-portfolio
 
 ## 🌐 Free 1-Click Deployment Options
 
-### 1. GitHub Pages (Recommended)
-1. Create a repository named `Arpit-aka-appu.github.io` on GitHub.
-2. Push the files in this directory to your repository.
-3. Your portfolio will immediately be live at: `https://arpit-aka-appu.github.io`
-
-### 2. Vercel / Netlify
-1. Drag and drop the `arpit-portfolio` folder directly into [Vercel](https://vercel.com) or [Netlify](https://netlify.com).
-2. Enjoy instant SSL and ultra-fast global CDN delivery.
+                                                                                      
 
 ---
 
